@@ -28,8 +28,8 @@ if (!GITHUB_CLIENT_ID || !GITHUB_CLIENT_SECRET) {
   console.error('   GITHUB_CLIENT_SECRET=your_github_client_secret_here');
   console.error('');
   console.error('🔗 Create a GitHub OAuth App at: https://github.com/settings/developers');
-  console.error('   - Homepage URL: http://localhost:5173');
-  console.error('   - Authorization callback URL: http://localhost:3001/auth/github/callback');
+  console.error('   - Homepage URL: https://tet-case-generator.vercel.app');
+  console.error('   - Authorization callback URL: https://tet-case-generator.onrender.com/auth/github/callback');
   process.exit(1);
 }
 
@@ -60,10 +60,10 @@ app.get('/auth/github/callback', async (req, res) => {
     
     userSessions.set(sessionId, { accessToken: access_token });
     
-    res.redirect(`http://localhost:5173/dashboard?session=${sessionId}`);
+    res.redirect(`https://tet-case-generator.vercel.app/dashboard?session=${sessionId}`);
   } catch (error) {
     console.error('OAuth error:', error);
-    res.redirect('http://localhost:5173/?error=auth_failed');
+    res.redirect('https://tet-case-generator.vercel.app/?error=auth_failed');
   }
 });
 
@@ -334,8 +334,8 @@ async function generateAIResponse(prompt) {
 
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
-  console.log(`🌐 Frontend URL: http://localhost:5173`);
-  console.log(`🔗 GitHub OAuth callback: http://localhost:3001/auth/github/callback`);
+  console.log(`🌐 Frontend URL: https://tet-case-generator.vercel.app`);
+  console.log(`🔗 GitHub OAuth callback: https://tet-case-generator.onrender.com/auth/github/callback`);
   console.log('');
   if (!AI_API_KEY) {
     console.log('⚠️  AI_API_KEY not set - using mock responses for test generation');

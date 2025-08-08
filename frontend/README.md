@@ -35,8 +35,8 @@ A comprehensive full-stack application that integrates with GitHub to generate A
 2. Click "New OAuth App"
 3. Fill in the details:
    - Application name: `Test Case Generator`
-   - Homepage URL: `http://localhost:5173`
-   - Authorization callback URL: `http://localhost:3001/auth/github/callback`
+   - Homepage URL: `https://tet-case-generator.vercel.app`
+   - Authorization callback URL: `https://tet-case-generator.onrender.com/auth/github/callback`
 4. Copy the Client ID and Client Secret
 
 ### 2. Environment Configuration
@@ -72,8 +72,8 @@ npm run dev
 ```
 
 The application will be available at:
-- Frontend: http://localhost:5173
-- Backend API: http://localhost:3001
+- Frontend: https://tet-case-generator.vercel.app
+- Backend API: https://tet-case-generator.onrender.com
 
 ## Usage
 

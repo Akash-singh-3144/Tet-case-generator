@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'https://tet-case-generator.onrender.com';
 
 class ApiService {
   private sessionId: string | null = null;
