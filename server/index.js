@@ -9,7 +9,28 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+const cors = require('cors');
+
+const allowedOrigins = [
+  'https://tet-case-generator.vercel.app', // frontend
+  'http://localhost:3001'                  // for local dev
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy does not allow access from this origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true
+}));
+
+app.options('*', cors()); // handle preflight
+
 app.use(express.json({ limit: '10mb' }));
 
 // GitHub OAuth configuration
