@@ -36,7 +36,7 @@ A comprehensive full-stack application that integrates with GitHub to generate A
 3. Fill in the details:
    - Application name: `Test Case Generator`
    - Homepage URL: `https://tet-case-generator.vercel.app`
-   - Authorization callback URL: `https://tet-case-generator.onrender.com/auth/github/callback`
+   - Authorization callback URL: `https://tet-case-generator-2sji.vercel.app/auth/github/callback`
 4. Copy the Client ID and Client Secret
 
 ### 2. Environment Configuration
@@ -73,7 +73,7 @@ npm run dev
 
 The application will be available at:
 - Frontend: https://tet-case-generator.vercel.app
-- Backend API: https://tet-case-generator.onrender.com
+- Backend API: https://tet-case-generator-2sji.vercel.app
 
 ## Usage
 

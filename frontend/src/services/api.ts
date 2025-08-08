@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'https://tet-case-generator.onrender.com';
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'https://tet-case-generator-2sji.vercel.app';
 
 class ApiService {
   private sessionId: string | null = null;
