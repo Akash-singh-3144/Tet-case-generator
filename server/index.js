@@ -38,7 +38,7 @@ const userSessions = new Map();
 
 // GitHub OAuth endpoints
 app.get('/auth/github', (req, res) => {
-  const redirectUri = `https://tet-case-generator.onrender.com/auth/github/callback`;
+  const redirectUri = `https://tet-case-generator-2sji.vercel.app/auth/github/callback`;
   const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${GITHUB_CLIENT_ID}&redirect_uri=${redirectUri}&scope=repo`;
   res.json({ authUrl: githubAuthUrl });
 });
